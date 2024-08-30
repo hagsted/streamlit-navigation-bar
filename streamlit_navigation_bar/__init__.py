@@ -257,6 +257,7 @@ def st_navbar(
     options=True,
     adjust=True,
     key=None,
+    on_change=None,
 ):
     """
     Place a navigation bar in your Streamlit app.
@@ -338,6 +339,8 @@ def st_navbar(
         A string or integer to use as a unique key for the component. If this
         is omitted, a key will be generated for the widget based on its
         content. Multiple navbars of the same type may not share the same key.
+    on_change : callable
+        An optional callback invoked when this date_input's value changes.
 
     Returns
     -------
@@ -397,6 +400,7 @@ def st_navbar(
         urls=urls,
         styles=styles,
         key=key,
+        on_change=on_change,
     )
 
     if adjust:
